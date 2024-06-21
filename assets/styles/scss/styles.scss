@@ -225,14 +225,15 @@ main {
 	}
 
 	.row {
-		padding: 0 5% 0;
+		padding: $padding-mobile;
 	}
 
 	.ancho-texto {
-		padding: 20px 25px;
+		padding: $padding-mobile;
 	}
 }
 
-.row {
-	padding: 0 10% 0;
-}
+// .row {
+// 	padding: 0 10% 0;
+// 	max-width: 70vw;
+// }
