@@ -21,7 +21,7 @@ main {
 	background-color: black;
 	color: white;
 	text-align: center;
-	padding-bottom: 20px;
+	padding-bottom: 0.5rem;
 }
 
 /*  NAVIGATION BAR  */
@@ -61,16 +61,9 @@ main {
 /* ALIGNMENTS GENERAL */
 
 .ancho-texto {
-	// agregar un mixin para mejorar la responsivness y que el texto tenga padding a los costados de 20px
-
 	max-width: 400px;
 	padding: 20px 0 20px 0;
 }
-// .air {
-// 	// creo que no se esta usando
-// 	margin-top: 5%;
-// 	width: 100%;
-// }
 
 .flex-center-xy {
 	display: flex;
@@ -113,7 +106,7 @@ main {
 	width: 250px;
 	height: 100px;
 	margin: 10px;
-	background-image: linear-gradient(to bottom, red, white);
+	background-image: $bk-grad-noticia;
 	color: black;
 	font-weight: bold;
 	text-align: center;
@@ -172,8 +165,8 @@ main {
 		grid-row: span 2;
 	}
 
-	.foto-vertical {
-		grid-row: span 2;
+	.foto-horizontal {
+		grid-column: span 2;
 	}
 
 	.foto-grande {
@@ -196,7 +189,10 @@ main {
 // }
 
 /*MEDIA QUERY*/
-@media (max-width: 560) {
+
+// @if (screen and max-width: 560) {
+// @media (max-width: 560)
+@media only screen and (max-width: 560px) {
 	.foto-vertical {
 		grid-row: span 1;
 	}
@@ -209,9 +205,6 @@ main {
 		grid-column: span 1;
 		grid-row: span 1;
 	}
-}
-
-@media only screen and (max-width: 560px) {
 	.logo-placeholder {
 		background-color: $logo-color-mobile;
 		transform: scale(0.8);
@@ -232,8 +225,35 @@ main {
 		padding: $padding-mobile;
 	}
 }
+// }
+
+// @media only screen and (max-width: 560px) {
+// 	.logo-placeholder {
+// 		background-color: $logo-color-mobile;
+// 		transform: scale(0.8);
+// 	}
+// 	.contacto {
+// 		min-width: 100vw;
+// 	}
+
+// 	.horario {
+// 		display: none;
+// 	}
+
+// 	.row {
+// 		padding: $padding-mobile;
+// 	}
+
+// 	.ancho-texto {
+// 		padding: $padding-mobile;
+// 	}
+// }
 
 // .row {
 // 	padding: 0 10% 0;
 // 	max-width: 70vw;
 // }
+
+// condicional
+
+// @if;
