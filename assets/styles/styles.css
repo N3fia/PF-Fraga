@@ -78,7 +78,7 @@ main {
   padding: 20px 0 20px 0;
 }
 
-.flex-center-xy {
+.xy {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +181,6 @@ main {
   grid-row: span 2;
 }
 
-/*MEDIA QUERY*/
 @media only screen and (max-width: 560px) {
   .foto-vertical {
     grid-row: span 1;
